@@ -15,7 +15,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'GUTENNIGHT_VERSION', '0.1.0' );
 define( 'GUTENNIGHT_PATH', plugin_dir_path( __FILE__ ) );
 define( 'GUTENNIGHT_URL', plugin_dir_url( __FILE__ ) );
+define( 'GUTENNIGHT_BASENAME', plugin_basename( __FILE__ ) );
 
-require_once GUTENNIGHT_PATH . 'includes/Plugin.php';
+require_once GUTENNIGHT_PATH . 'includes/Autoloader.php';
+
+GutenNight\AdminDark\Autoloader::register();
 
 GutenNight\AdminDark\Plugin::init();
