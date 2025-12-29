@@ -5,6 +5,7 @@ namespace GutenNight\AdminDark;
 use GutenNight\AdminDark\Admin\BodyClass;
 use GutenNight\AdminDark\Admin\Enqueue;
 use GutenNight\AdminDark\Admin\SettingsPage;
+use GutenNight\AdminDark\Admin\UserPreferences;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	return;
@@ -28,5 +29,6 @@ class Plugin {
 		BodyClass::register();
 		Enqueue::register();
 		SettingsPage::register();
+		UserPreferences::register();
 	}
 }
