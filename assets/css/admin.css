@@ -1,0 +1,141 @@
+body.gutennight-enabled.wp-admin {
+	background-color: #111827;
+	color: #e5e7eb;
+}
+
+body.gutennight-enabled.wp-admin a {
+	color: #93c5fd;
+}
+
+body.gutennight-enabled.wp-admin a:focus,
+body.gutennight-enabled.wp-admin a:hover {
+	color: #bfdbfe;
+}
+
+body.gutennight-enabled #wpadminbar {
+	background: #0b1220;
+	color: #e5e7eb;
+}
+
+body.gutennight-enabled #wpadminbar a,
+body.gutennight-enabled #wpadminbar .ab-label,
+body.gutennight-enabled #wpadminbar .ab-icon::before {
+	color: #e5e7eb;
+}
+
+body.gutennight-enabled #adminmenuwrap,
+body.gutennight-enabled #adminmenuback,
+body.gutennight-enabled #adminmenu,
+body.gutennight-enabled #adminmenu .wp-submenu {
+	background-color: #0f172a;
+	color: #e5e7eb;
+}
+
+body.gutennight-enabled #adminmenu a {
+	color: #cbd5f5;
+}
+
+body.gutennight-enabled #adminmenu .wp-has-current-submenu > a,
+body.gutennight-enabled #adminmenu .wp-menu-open > a,
+body.gutennight-enabled #adminmenu .current a {
+	background-color: #1f2937;
+	color: #ffffff;
+}
+
+body.gutennight-enabled #adminmenu .wp-submenu a {
+	color: #cbd5f5;
+}
+
+body.gutennight-enabled #adminmenu .wp-submenu a:hover,
+body.gutennight-enabled #adminmenu a:hover,
+body.gutennight-enabled #adminmenu a:focus {
+	background-color: #1f2937;
+	color: #ffffff;
+}
+
+body.gutennight-enabled .wrap {
+	color: #e5e7eb;
+}
+
+body.gutennight-enabled .postbox,
+body.gutennight-enabled .card,
+body.gutennight-enabled .welcome-panel,
+body.gutennight-enabled .stuffbox {
+	background: #111827;
+	border-color: #1f2937;
+	color: #e5e7eb;
+}
+
+body.gutennight-enabled .notice,
+body.gutennight-enabled .updated,
+body.gutennight-enabled .error,
+body.gutennight-enabled .notice-info,
+body.gutennight-enabled .notice-success,
+body.gutennight-enabled .notice-warning {
+	background-color: #0f172a;
+	border-color: #334155;
+	color: #e5e7eb;
+}
+
+body.gutennight-enabled .widefat {
+	background-color: #0f172a;
+	border-color: #1f2937;
+	color: #e5e7eb;
+}
+
+body.gutennight-enabled .widefat thead th,
+body.gutennight-enabled .widefat tfoot th,
+body.gutennight-enabled .widefat tbody tr {
+	border-color: #1f2937;
+}
+
+body.gutennight-enabled input[type="text"],
+body.gutennight-enabled input[type="search"],
+body.gutennight-enabled input[type="url"],
+body.gutennight-enabled input[type="tel"],
+body.gutennight-enabled input[type="email"],
+body.gutennight-enabled input[type="number"],
+body.gutennight-enabled input[type="password"],
+body.gutennight-enabled select,
+body.gutennight-enabled textarea {
+	background-color: #0b1220;
+	border-color: #334155;
+	color: #e5e7eb;
+}
+
+body.gutennight-enabled input[type="text"]:focus,
+body.gutennight-enabled input[type="search"]:focus,
+body.gutennight-enabled input[type="url"]:focus,
+body.gutennight-enabled input[type="tel"]:focus,
+body.gutennight-enabled input[type="email"]:focus,
+body.gutennight-enabled input[type="number"]:focus,
+body.gutennight-enabled input[type="password"]:focus,
+body.gutennight-enabled select:focus,
+body.gutennight-enabled textarea:focus {
+	border-color: #60a5fa;
+	box-shadow: 0 0 0 1px #60a5fa;
+}
+
+body.gutennight-enabled .button,
+body.gutennight-enabled .button-secondary {
+	background: #1f2937;
+	border-color: #334155;
+	color: #e5e7eb;
+}
+
+body.gutennight-enabled .button:hover,
+body.gutennight-enabled .button:focus,
+body.gutennight-enabled .button-secondary:hover,
+body.gutennight-enabled .button-secondary:focus {
+	background: #374151;
+	border-color: #60a5fa;
+	color: #ffffff;
+}
+
+body.gutennight-enabled #wpcontent {
+	background: #111827;
+}
+
+body.gutennight-enabled #wpfooter {
+	color: #9ca3af;
+}

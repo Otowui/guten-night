@@ -1,0 +1,58 @@
+body.gutennight-enabled .interface-interface-skeleton,
+body.gutennight-enabled .interface-interface-skeleton__content,
+body.gutennight-enabled .edit-post-layout,
+body.gutennight-enabled .edit-post-sidebar {
+	background-color: #0f172a;
+	color: #e5e7eb;
+}
+
+body.gutennight-enabled .components-panel,
+body.gutennight-enabled .components-panel__body,
+body.gutennight-enabled .components-panel__body-title {
+	background-color: #111827;
+	border-color: #1f2937;
+	color: #e5e7eb;
+}
+
+body.gutennight-enabled .components-popover__content,
+body.gutennight-enabled .components-popover__content .components-menu-group {
+	background-color: #111827;
+	border-color: #1f2937;
+	color: #e5e7eb;
+}
+
+body.gutennight-enabled .components-button {
+	color: #e5e7eb;
+}
+
+body.gutennight-enabled .components-button.is-primary {
+	background: #2563eb;
+	border-color: #1d4ed8;
+	color: #ffffff;
+}
+
+body.gutennight-enabled .components-button.is-secondary {
+	background: #1f2937;
+	border-color: #334155;
+	color: #e5e7eb;
+}
+
+body.gutennight-enabled .components-toolbar,
+body.gutennight-enabled .edit-post-header,
+body.gutennight-enabled .edit-post-sidebar-header {
+	background-color: #0b1220;
+	border-color: #1f2937;
+	color: #e5e7eb;
+}
+
+body.gutennight-enabled .components-panel__body-toggle {
+	color: #e5e7eb;
+}
+
+body.gutennight-enabled .components-text-control__input,
+body.gutennight-enabled .components-select-control__input,
+body.gutennight-enabled .components-textarea-control__input {
+	background-color: #0b1220;
+	border-color: #334155;
+	color: #e5e7eb;
+}
