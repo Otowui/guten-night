@@ -65,6 +65,7 @@ class Enqueue {
 		$screen = Screen::get_current_screen();
 	
 		$integrations = array(
+			// Future integrations (Woo, Jetpack, etc.) should register here.
 			'integrations_woocommerce' => new WooCommerce(),
 			'integrations_jetpack'     => new Jetpack(),
 		);

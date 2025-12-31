@@ -14,6 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class Plugin {
 	private static ?Plugin $instance = null;
+	private bool $hooks_registered   = false;
 	
 	public static function init(): void {
 		if ( null === self::$instance ) {
@@ -27,8 +28,12 @@ class Plugin {
 	}
 		
 	private function register_hooks(): void {
+		if ( $this->hooks_registered ) {
+			return;
+		}
 		if ( ! Requirements::meets() ) {
 			Requirements::register_notice();
+			$this->hooks_registered = true;
 			return;
 		}
 		
@@ -36,5 +41,7 @@ class Plugin {
 		Enqueue::register();
 		SettingsPage::register();
 		UserPreferences::register();
+			
+		$this->hooks_registered = true;
 	}
 }

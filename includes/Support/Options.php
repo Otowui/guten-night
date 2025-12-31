@@ -14,6 +14,7 @@ class Options {
 		'allow_user_toggle'       => true,
 		'enable_block_editor'     => true,
 		'enable_admin'            => true,
+		// Future integrations (Woo, Jetpack, etc.) should add defaults here.
 		'integrations_woocommerce' => true,
 		'integrations_jetpack'    => true,
 	);

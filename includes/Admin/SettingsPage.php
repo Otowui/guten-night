@@ -18,6 +18,7 @@ class SettingsPage {
 		'allow_user_toggle'        => 'Allow users to toggle dark mode for themselves',
 		'enable_admin'             => 'Enable dark mode in wp-admin',
 		'enable_block_editor'      => 'Enable dark mode in block editor',
+		// Future integrations (Woo, Jetpack, etc.) should add settings here.
 		'integrations_woocommerce' => 'Enable WooCommerce integration styles',
 		'integrations_jetpack'     => 'Enable Jetpack integration styles',
 	);
