@@ -2,6 +2,8 @@
 
 namespace GutenNight\AdminDark\Admin;
 
+use GutenNight\AdminDark\Integrations\Jetpack;
+use GutenNight\AdminDark\Integrations\WooCommerce;
 use GutenNight\AdminDark\Support\Options;
 use GutenNight\AdminDark\Support\Screen;
 
@@ -39,23 +41,7 @@ class Enqueue {
 			true
 		);
 		
-		if ( Options::get( 'integrations_woocommerce' ) && Screen::is_woocommerce_active() && Screen::is_woocommerce_screen() ) {
-			wp_enqueue_style(
-				'gutennight-woocommerce',
-				GUTENNIGHT_URL . 'assets/dist/css/integrations/woocommerce.css',
-				array(),
-				GUTENNIGHT_VERSION
-			);
-		}
-		
-		if ( Options::get( 'integrations_jetpack' ) && Screen::is_jetpack_active() && Screen::is_jetpack_screen() ) {
-			wp_enqueue_style(
-				'gutennight-jetpack',
-				GUTENNIGHT_URL . 'assets/dist/css/integrations/jetpack.css',
-				array(),
-				GUTENNIGHT_VERSION
-			);
-		}
+		self::enqueue_integrations();
 	}
 
 	public static function enqueue_editor(): void {
@@ -73,6 +59,36 @@ class Enqueue {
 			array(),
 			GUTENNIGHT_VERSION
 		);
+	}
+	
+	private static function enqueue_integrations(): void {
+		$screen = Screen::get_current_screen();
+	
+		$integrations = array(
+			'integrations_woocommerce' => new WooCommerce(),
+			'integrations_jetpack'     => new Jetpack(),
+		);
+	
+		foreach ( $integrations as $option_key => $integration ) {
+			if ( ! Options::get( $option_key ) ) {
+				continue;
+			}
+	
+			if ( ! $integration->is_active() ) {
+				continue;
+			}
+	
+			if ( ! $integration->should_load_for_screen( $screen ) ) {
+				continue;
+			}
+	
+			wp_enqueue_style(
+				$integration->get_style_handle(),
+				$integration->get_style_src(),
+				array(),
+				GUTENNIGHT_VERSION
+			);
+		}
 	}
 	
 	private static function is_enabled_for_user(): bool {
