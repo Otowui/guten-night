@@ -6,6 +6,7 @@ use GutenNight\AdminDark\Admin\BodyClass;
 use GutenNight\AdminDark\Admin\Enqueue;
 use GutenNight\AdminDark\Admin\SettingsPage;
 use GutenNight\AdminDark\Admin\UserPreferences;
+use GutenNight\AdminDark\Support\Requirements;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	return;
@@ -26,6 +27,11 @@ class Plugin {
 	}
 		
 	private function register_hooks(): void {
+		if ( ! Requirements::meets() ) {
+			Requirements::register_notice();
+			return;
+		}
+		
 		BodyClass::register();
 		Enqueue::register();
 		SettingsPage::register();

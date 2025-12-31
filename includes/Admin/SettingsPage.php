@@ -69,6 +69,10 @@ class SettingsPage {
 	}
 
 	public static function render_page(): void {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', 'guten-night' ) );
+		}
+		
 		echo '<div class="wrap">';
 		echo '<h1>' . esc_html__( 'GutenNight', 'guten-night' ) . '</h1>';
 		echo '<form method="post" action="options.php">';
