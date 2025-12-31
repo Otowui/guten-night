@@ -1,58 +1,103 @@
+body.gutennight-enabled {
+	--gn-background: #0b1220;
+	--gn-surface: #111827;
+	--gn-surface-2: #0f172a;
+	--gn-border: #1f2937;
+	--gn-text: #e5e7eb;
+	--gn-text-muted: #9ca3af;
+	--gn-link: #93c5fd;
+	--gn-link-hover: #bfdbfe;
+	--gn-focus: #60a5fa;
+	--gn-success: #22c55e;
+	--gn-warning: #f59e0b;
+	--gn-danger: #ef4444;
+}
+
 body.gutennight-enabled .interface-interface-skeleton,
 body.gutennight-enabled .interface-interface-skeleton__content,
+body.gutennight-enabled .interface-interface-skeleton__body,
 body.gutennight-enabled .edit-post-layout,
-body.gutennight-enabled .edit-post-sidebar {
-	background-color: #0f172a;
-	color: #e5e7eb;
+body.gutennight-enabled .edit-post-layout__content,
+body.gutennight-enabled .edit-post-visual-editor,
+body.gutennight-enabled .block-editor,
+body.gutennight-enabled .block-editor__container {
+	background-color: var(--gn-background);
+	color: var(--gn-text);
+}
+
+body.gutennight-enabled .edit-post-sidebar,
+body.gutennight-enabled .edit-post-sidebar__panel-tabs,
+body.gutennight-enabled .edit-post-sidebar__panel {
+	background-color: var(--gn-surface-2);
+	border-color: var(--gn-border);
+	color: var(--gn-text);
 }
 
 body.gutennight-enabled .components-panel,
 body.gutennight-enabled .components-panel__body,
 body.gutennight-enabled .components-panel__body-title {
-	background-color: #111827;
-	border-color: #1f2937;
-	color: #e5e7eb;
+	background-color: var(--gn-surface);
+	border-color: var(--gn-border);
+	color: var(--gn-text);
 }
 
 body.gutennight-enabled .components-popover__content,
-body.gutennight-enabled .components-popover__content .components-menu-group {
-	background-color: #111827;
-	border-color: #1f2937;
-	color: #e5e7eb;
-}
-
-body.gutennight-enabled .components-button {
-	color: #e5e7eb;
-}
-
-body.gutennight-enabled .components-button.is-primary {
-	background: #2563eb;
-	border-color: #1d4ed8;
-	color: #ffffff;
-}
-
-body.gutennight-enabled .components-button.is-secondary {
-	background: #1f2937;
-	border-color: #334155;
-	color: #e5e7eb;
+body.gutennight-enabled .components-popover__content .components-menu-group,
+body.gutennight-enabled .components-menu-group {
+	background-color: var(--gn-surface);
+	border-color: var(--gn-border);
+	color: var(--gn-text);
 }
 
 body.gutennight-enabled .components-toolbar,
 body.gutennight-enabled .edit-post-header,
-body.gutennight-enabled .edit-post-sidebar-header {
-	background-color: #0b1220;
-	border-color: #1f2937;
-	color: #e5e7eb;
+body.gutennight-enabled .edit-post-header-toolbar,
+body.gutennight-enabled .edit-post-sidebar-header,
+body.gutennight-enabled .block-editor-block-toolbar {
+	background-color: var(--gn-surface-2);
+	border-color: var(--gn-border);
+	color: var(--gn-text);
 }
 
-body.gutennight-enabled .components-panel__body-toggle {
-	color: #e5e7eb;
+body.gutennight-enabled .components-panel__body-toggle,
+body.gutennight-enabled .components-button {
+	color: var(--gn-text);
+}
+
+body.gutennight-enabled .components-button.is-primary {
+	background: var(--gn-link);
+	border-color: var(--gn-focus);
+	color: #0b1220;
+}
+
+body.gutennight-enabled .components-button.is-secondary {
+	background: var(--gn-surface);
+	border-color: var(--gn-border);
+	color: var(--gn-text);
 }
 
 body.gutennight-enabled .components-text-control__input,
 body.gutennight-enabled .components-select-control__input,
 body.gutennight-enabled .components-textarea-control__input {
-	background-color: #0b1220;
-	border-color: #334155;
-	color: #e5e7eb;
+	background-color: var(--gn-surface-2);
+	border-color: var(--gn-border);
+	color: var(--gn-text);
+}
+
+body.gutennight-enabled .components-text-control__input:focus,
+body.gutennight-enabled .components-text-control__input:focus-visible,
+body.gutennight-enabled .components-select-control__input:focus,
+body.gutennight-enabled .components-select-control__input:focus-visible,
+body.gutennight-enabled .components-textarea-control__input:focus,
+body.gutennight-enabled .components-textarea-control__input:focus-visible {
+	border-color: var(--gn-focus);
+	box-shadow: 0 0 0 1px var(--gn-focus);
+	outline: 2px solid var(--gn-focus);
+	outline-offset: 1px;
+}
+
+body.gutennight-enabled .components-button:focus-visible,
+body.gutennight-enabled .components-panel__body-toggle:focus-visible {
+	outline: 2px solid var(--gn-focus);
+	outline-offset: 2px;
 }

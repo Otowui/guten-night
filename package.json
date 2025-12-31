@@ -1,0 +1,11 @@
+{
+  "name": "guten-night",
+  "private": true,
+  "scripts": {
+	"build:css": "sass assets/src/scss:assets/dist/css --no-source-map",
+	"watch:css": "sass --watch assets/src/scss:assets/dist/css"
+  },
+  "devDependencies": {
+	"sass": "^1.77.8"
+  }
+}

@@ -1,0 +1,88 @@
+@use "partials/tokens";
+
+body.gutennight-enabled {
+	.interface-interface-skeleton,
+	.interface-interface-skeleton__content,
+	.interface-interface-skeleton__body,
+	.edit-post-layout,
+	.edit-post-layout__content,
+	.edit-post-visual-editor,
+	.block-editor,
+	.block-editor__container {
+		background-color: var(--gn-background);
+		color: var(--gn-text);
+	}
+
+	.edit-post-sidebar,
+	.edit-post-sidebar__panel-tabs,
+	.edit-post-sidebar__panel {
+		background-color: var(--gn-surface-2);
+		border-color: var(--gn-border);
+		color: var(--gn-text);
+	}
+
+	.components-panel,
+	.components-panel__body,
+	.components-panel__body-title {
+		background-color: var(--gn-surface);
+		border-color: var(--gn-border);
+		color: var(--gn-text);
+	}
+
+	.components-popover__content,
+	.components-popover__content .components-menu-group,
+	.components-menu-group {
+		background-color: var(--gn-surface);
+		border-color: var(--gn-border);
+		color: var(--gn-text);
+	}
+
+	.components-toolbar,
+	.edit-post-header,
+	.edit-post-header-toolbar,
+	.edit-post-sidebar-header,
+	.block-editor-block-toolbar {
+		background-color: var(--gn-surface-2);
+		border-color: var(--gn-border);
+		color: var(--gn-text);
+	}
+
+	.components-panel__body-toggle,
+	.components-button {
+		color: var(--gn-text);
+	}
+
+	.components-button.is-primary {
+		background: var(--gn-link);
+		border-color: var(--gn-focus);
+		color: #0b1220;
+	}
+
+	.components-button.is-secondary {
+		background: var(--gn-surface);
+		border-color: var(--gn-border);
+		color: var(--gn-text);
+	}
+
+	.components-text-control__input,
+	.components-select-control__input,
+	.components-textarea-control__input {
+		background-color: var(--gn-surface-2);
+		border-color: var(--gn-border);
+		color: var(--gn-text);
+
+		&:focus,
+		&:focus-visible {
+			border-color: var(--gn-focus);
+			box-shadow: 0 0 0 1px var(--gn-focus);
+			outline: 2px solid var(--gn-focus);
+			outline-offset: 1px;
+		}
+	}
+
+	.components-button:focus-visible,
+	.components-panel__body-toggle:focus-visible {
+		outline: 2px solid var(--gn-focus);
+		outline-offset: 2px;
+	}
+}
